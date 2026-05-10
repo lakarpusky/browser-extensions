@@ -4,10 +4,10 @@ My personal browser extensions.
 
 | Name | Browser | Description |
 |------|---------|-------------|
-| [open-in-iina](./open-in-iina) | Chrome | Opens the current YouTube, Twitter/X, or Twitch video in IINA |
-| [force-cors](./force-cors) | Chrome | Bypasses CORS restrictions for local development |
-| [pip-preview](./pip-preview) | Chrome | Pops the active video into a minimal Picture-in-Picture window |
-| [storage-inspector](./storage-inspector) | Chrome | Inspect and edit localStorage, sessionStorage, and cookies for the current tab |
+| [Open in IINA](./open-in-iina) | Chrome | Opens the current YouTube, Twitter/X, or Twitch video in IINA |
+| [Force CORS](./force-cors) | Chrome | Bypasses CORS restrictions for local development |
+| [PiP Preview](./pip-preview) | Chrome | Pops the active video into a minimal Picture-in-Picture window |
+| [Storage Inspector](./storage-inspector) | Chrome | Inspect and edit localStorage, sessionStorage, and cookies for the current tab |
 
 ## Install
 

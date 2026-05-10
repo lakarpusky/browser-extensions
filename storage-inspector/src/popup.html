@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div id="app">
+      <nav class="tabs" role="tablist">
+        <button class="tab active" data-store="local" role="tab">Local</button>
+        <button class="tab" data-store="session" role="tab">Session</button>
+        <button class="tab" data-store="cookies" role="tab">Cookies</button>
+      </nav>
+
+      <div class="toolbar">
+        <button class="tool-btn" id="add" title="Add entry">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M8 3v10M3 8h10"/>
+          </svg>
+        </button>
+        <button class="tool-btn" id="refresh" title="Refresh">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13.5 8a5.5 5.5 0 1 1-1.6-3.9"/>
+            <path d="M13.5 2.5v3h-3"/>
+          </svg>
+        </button>
+        <input id="search" type="search" placeholder="Filter" autocomplete="off" />
+        <button class="tool-btn danger" id="clear" title="Clear all entries">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <circle cx="8" cy="8" r="6"/>
+            <path d="M3.8 3.8l8.4 8.4"/>
+          </svg>
+        </button>
+      </div>
+
+      <main>
+        <div id="grid">
+          <div class="grid-header">
+            <div class="col-key sortable" id="sort-key">
+              <span>Key</span>
+              <span class="sort-indicator" id="sort-indicator">▲</span>
+            </div>
+            <div class="col-resize" id="resizer"></div>
+            <div class="col-value">Value</div>
+            <div class="col-actions"></div>
+          </div>
+          <div id="rows"></div>
+          <div id="empty" hidden>No entries.</div>
+        </div>
+      </main>
+
+      <div id="preview-host"></div>
+
+      <div id="status">
+        <span id="count"></span>
+        <span id="origin" title=""></span>
+      </div>
+
+      <div id="ctxmenu" class="ctxmenu" hidden>
+        <button data-act="sort-key">Sort by Key</button>
+        <button data-act="edit" class="row-only" hidden></button>
+        <button data-act="refresh">Refresh</button>
+        <button data-act="delete" class="row-only danger" hidden>Delete</button>
+      </div>
+
+      <div id="json-ctxmenu" class="ctxmenu" hidden>
+        <button data-act="expand-recursive">Expand recursively</button>
+        <button data-act="collapse-children">Collapse children</button>
+      </div>
+    </div>
+
+    <script src="popup.js" type="module"></script>
+  </body>
+</html>

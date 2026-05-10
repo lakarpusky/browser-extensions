@@ -1,0 +1,16 @@
+# Node / Build
+node_modules/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Chrome
+*.crx
+*.pem
